@@ -33,7 +33,7 @@ class PipeDrive {
           api_token: `${this.key}`,
         },
       })
-      .then((response) => response.data);
+      .then((response) => response.data.data);
   }
 
   getAllDeals() {

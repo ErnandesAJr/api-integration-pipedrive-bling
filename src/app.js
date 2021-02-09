@@ -8,6 +8,8 @@ import './database/index.js';
 import connectDB from './database/index.js'
 
 // import CronJobService from './services/CronJobService';
+import PipeDriveService from './services/PipeDriveService.js';
+
 
 class App {
   constructor() {
@@ -27,6 +29,7 @@ class App {
 
   services() {
     connectDB();
+    PipeDriveService.getIdStageByName('Won')
     //CronJob Here
   }
 
