@@ -1,12 +1,12 @@
 import jsontoxml from 'jsontoxml';
 
-const mountXmlForRequestBling = (titleProduct,valueProduct, qtyProduct, nameClient)=> {
+const mountXmlForRequestBling = (id, title, value, products_count, person_name)=> {
         const xml = jsontoxml({
         pedido: [
           {
             name: 'cliente',
             children: [
-              { name: 'nome', text: nameClient ||'Fantasy' },
+              { name: 'nome', text: 'Fantasia' },
             ],
           },
           {
@@ -14,11 +14,11 @@ const mountXmlForRequestBling = (titleProduct,valueProduct, qtyProduct, nameClie
             children: [
               { name: 'item',
               children: [
-                { name: 'codigo', text: 1 },
-                { name: 'descricao', text: titleProduct || 'Won Deal' },
+                { name: 'codigo', text: id || 1 },
+                { name: 'descricao', text: title || 'Won Deal' },
                 { name: 'un', text: 'Un' },
-                { name: 'qtde', text: qtyProduct || 1 },
-                { name: 'vlr_unit', text: valueProduct || 0 },
+                { name: 'qtde', text: products_count || 1 },
+                { name: 'vlr_unit', text: value || 0 },
               ]}
             ],
           },

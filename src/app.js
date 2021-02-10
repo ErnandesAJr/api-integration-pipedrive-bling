@@ -8,10 +8,6 @@ import './database/index.js';
 import connectDB from './database/index.js'
 
 // import CronJobService from './services/CronJobService';
-import PipeDriveService from './services/PipeDriveService.js';
-import BlingService from './services/BlingService.js';
-
-
 
 class App {
   constructor() {
@@ -19,7 +15,7 @@ class App {
     this.middlewares();
     this.routes();
     // this.handleExceptions();
-    this.services();
+    // this.services();
   }
 
   middlewares() {
@@ -31,11 +27,6 @@ class App {
 
   async services() {
     connectDB();
-    const stageWon = await PipeDriveService.getIdStageByName('Won')
-    const dealsWon = await PipeDriveService.getDealsByStage(stageWon.id)
-    console.log(dealsWon)
-
-    // BlingService.createSolicitations([{ nameClient:'Fantasia', titleProduct:'Celular'}])
     //CronJob (Readme)
 
   }

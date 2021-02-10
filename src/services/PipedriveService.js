@@ -16,8 +16,6 @@ class PipeDriveService {
     const dealsStage = deals.filter(({stage_id})=> stage_id == 5)
     return dealsStage;
   }
-
-
 }
 
 export default new PipeDriveService();

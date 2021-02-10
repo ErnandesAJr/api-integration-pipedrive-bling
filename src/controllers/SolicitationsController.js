@@ -1,5 +1,7 @@
 import HttpStatus from 'http-status-codes';
 import PipeDriveService from '../services/PipeDriveService.js'
+import BlingService from '../services/BlingService.js';
+
 // Isso deve ser do mongo
 // import FavoriteLocation from '../database/models/FavoriteLocation';
 
@@ -24,19 +26,10 @@ class SolicitationsController {
   // }
 
   async refresh(req, res) {
-    // 1 pegar o servico do PipeDrive e pegar todos os deals com Won
-    const solicitationsWon = await PipeDriveService.getIdStageByName('Won')
-    console.log(solicitationsWon)
-    // 2 criar um pedido no Bling para cada deal no PipeDrive
-
-    // 3 adicionar esse pedido 
+    const stageWon = await PipeDriveService.getIdStageByName('Won')
+    const dealsWon = await PipeDriveService.getDealsByStage(stageWon.id)  
+    await BlingService.createSolicitations(dealsWon)
     
-    const favoriteLocations = await FavoriteLocation.findAll({
-      where: {
-        user_id: req.user.id,
-      },
-    });
-
     return res.status(HttpStatus.OK).json(favoriteLocations);
   }
 
