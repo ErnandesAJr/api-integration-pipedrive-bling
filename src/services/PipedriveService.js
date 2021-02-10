@@ -8,10 +8,9 @@ class PipeDriveService {
   async getIdStageByName(nameStage) {
     const stages = await this.pipedrive.getStages()
     const stageWanted = stages.filter(({name})=> name == nameStage)
-    console.log(stageWanted)
 
     return {
-      stages,
+      stageWanted,
     };
   }
 

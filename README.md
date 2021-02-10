@@ -12,6 +12,10 @@ https://ajuda.bling.com.br/hc/pt-br/articles/360035558634-Usu%C3%A1rio-e-Usu%C3%
 
 https://ajuda.bling.com.br/hc/pt-br/categories/360002186374-Integra%C3%A7%C3%B5es-e-Lojas-Virtuais
 
+https://ajuda.bling.com.br/hc/pt-br/categories/360002186394-API-para-Desenvolvedores
+
+https://ajuda.bling.com.br/hc/pt-br/sections/360008117394-Pedidos-API-para-desenvolvedores
+
 ## PipeDrive
 
 https://support.pipedrive.com/hc/pt-br/articles/207344545-Como-posso-encontrar-minha-chave-de-API-pessoal-

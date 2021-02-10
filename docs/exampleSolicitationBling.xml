@@ -1,0 +1,51 @@
+<raiz>
+    <pedido>
+                <desconto>0,00</desconto>
+                <observacoes/>
+                <observacaointerna/>
+                <data>2021-02-09</data>
+                <numero>1</numero>
+                <numeroordemcompra/>
+                <vendedor/>
+                <valorfrete>0.00</valorfrete>
+                <totalprodutos>0.00</totalprodutos>
+                <totalvenda>0.00</totalvenda>
+                <situacao>Em aberto</situacao>
+                <datasaida>2021-02-09</datasaida>
+                <cliente>
+                    <id>11237085687</id>
+                    <nome>Fantasia</nome>
+                    <cnpj/>
+                    <ie>ISENTO</ie>
+                    <rg/>
+                    <endereco/>
+                    <numero/>
+                    <complemento/>
+                    <cidade/>
+                    <bairro/>
+                    <cep/>
+                    <uf> </uf>
+                    <email/>
+                    <celular/>
+                    <fone/>
+                </cliente>
+                <itens>
+                    <item>
+                        <codigo/>
+                        <descricao>Celular</descricao>
+                        <quantidade>1.0000</quantidade>
+                        <valorunidade>0.0000000000</valorunidade>
+                        <precocusto/>
+                        <descontoitem>0.00</descontoitem>
+                        <un>1</un>
+                        <pesobruto>0.00000</pesobruto>
+                        <largura/>
+                        <altura/>
+                        <profundidade/>
+                        <descricaodetalhada/>
+                        <unidademedida>cm</unidademedida>
+                        <gtin/>
+                    </item>
+                </itens>
+            </pedido>
+</raiz>

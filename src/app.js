@@ -9,6 +9,8 @@ import connectDB from './database/index.js'
 
 // import CronJobService from './services/CronJobService';
 import PipeDriveService from './services/PipeDriveService.js';
+import BlingService from './services/BlingService.js';
+
 
 
 class App {
@@ -30,7 +32,9 @@ class App {
   services() {
     connectDB();
     PipeDriveService.getIdStageByName('Won')
-    //CronJob Here
+    BlingService.createSolicitations([{ nameClient:'Fantasia', titleProduct:'Celular'}])
+    //CronJob (Readme)
+
   }
 
   // handleExceptions() {
