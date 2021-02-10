@@ -1,12 +1,10 @@
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-// import path from 'path';
-// import exceptions from './errors/exceptions';
 import routes from './routes/index.js';
 import './database/index.js';
 import connectDB from './database/index.js'
-
+// import exceptions from './errors/exceptions';
 // import CronJobService from './services/CronJobService';
 
 class App {
