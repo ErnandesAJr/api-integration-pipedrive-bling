@@ -1,4 +1,5 @@
 import HttpStatus from 'http-status-codes';
+import PipeDriveService from '../services/PipeDriveService.js'
 // Isso deve ser do mongo
 // import FavoriteLocation from '../database/models/FavoriteLocation';
 
@@ -8,7 +9,7 @@ import HttpStatus from 'http-status-codes';
 
 // import mapquest from '../utils/mapquest-linkid';
 
-class OpportunitiesController {
+class SolicitationsController {
 
   // async get(req, res) {
   //   const { favoriteLocationId: id } = req.params;
@@ -22,14 +23,22 @@ class OpportunitiesController {
   //   return res.status(HttpStatus.OK).json(favLocation);
   // }
 
-  // async listAll(req, res) {
-  //   const favoriteLocations = await FavoriteLocation.findAll({
-  //     where: {
-  //       user_id: req.user.id,
-  //     },
-  //   });
-  //   return res.status(HttpStatus.OK).json(favoriteLocations);
-  // }
+  async refresh(req, res) {
+    // 1 pegar o servico do PipeDrive e pegar todos os deals com Won
+    const solicitationsWon = await PipeDriveService.getIdStageByName('Won')
+    console.log(solicitationsWon)
+    // 2 criar um pedido no Bling para cada deal no PipeDrive
+
+    // 3 adicionar esse pedido 
+    
+    const favoriteLocations = await FavoriteLocation.findAll({
+      where: {
+        user_id: req.user.id,
+      },
+    });
+
+    return res.status(HttpStatus.OK).json(favoriteLocations);
+  }
 
   // async insert(req, res) {
   //   const newFavLocation = req.body;
@@ -85,4 +94,4 @@ class OpportunitiesController {
   // }
 }
 
-export default new OpportunitiesController();
+export default new SolicitationsController();

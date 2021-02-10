@@ -17,7 +17,7 @@ class App {
   constructor() {
     this.express = express();
     this.middlewares();
-    // this.routes();
+    this.routes();
     // this.handleExceptions();
     this.services();
   }
@@ -29,10 +29,13 @@ class App {
     this.express.use(cors());
   }
 
-  services() {
+  async services() {
     connectDB();
-    PipeDriveService.getIdStageByName('Won')
-    BlingService.createSolicitations([{ nameClient:'Fantasia', titleProduct:'Celular'}])
+    const stageWon = await PipeDriveService.getIdStageByName('Won')
+    const dealsWon = await PipeDriveService.getDealsByStage(stageWon.id)
+    console.log(dealsWon)
+
+    // BlingService.createSolicitations([{ nameClient:'Fantasia', titleProduct:'Celular'}])
     //CronJob (Readme)
 
   }
@@ -41,9 +44,9 @@ class App {
   //   Object.values(exceptions).forEach((expection) => this.express.use(expection));
   // }
 
-  // routes() {
-  //   this.express.use(routes);
-  // }
+  routes() {
+    this.express.use(routes);
+  }
 }
 
 export default new App();
