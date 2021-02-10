@@ -47,7 +47,7 @@ As a future goal, here are some interesting features mapped during code developm
 
 ## Project structure
 
-![Struture](docs/images/project-struture.png)
+![Struture](docs/images/project-struture.PNG)
 
 ## 😵 Useful links
 
