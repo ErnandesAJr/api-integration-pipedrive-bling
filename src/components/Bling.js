@@ -14,11 +14,8 @@ export default class Bling {
   }
 
   createSolicitation(solicitation) {
-    axios.post(`${process.env.BLING_URL}/pedido/json/?apikey=${process.env.BLING_KEY}&xml=${solicitation}`)
-      .then((response) => { console.log(response.data.retorno.erros[0]) })
-      .catch((err) => {
-        console.log(JSON.stringify(err.response.data.retorno.erros))
-      });
+    return axios.post(`${process.env.BLING_URL}/pedido/json/?apikey=${process.env.BLING_KEY}&xml=${solicitation}`).then((response) => response.data.retorno)
+      
   }
 }
 

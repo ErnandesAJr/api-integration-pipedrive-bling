@@ -6,12 +6,19 @@ class BlingService {
     this.bling = new Bling();
   }
 
-  //lidar quando uma solicitação ja tiver sido criada e as outras não, saber se vai funcionar
   async createSolicitations(solicitations) {
+    let totalSolicitations = solicitations.length
+    let solicitationsAdd = [];
     solicitations.forEach(async solicitation => {
       const solicitationsXML = mountXmlForRequestBling(solicitation)
-      await this.bling.createSolicitation(solicitationsXML)
+      const response = await this.bling.createSolicitation(solicitationsXML)
+      if (response.pedidos) {
+        solicitationsAdd.push(solicitation);
+      }
+      // if(response.erros) Count the ones already created
     });
+    return solicitationsAdd
+
   }
 }
 

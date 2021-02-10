@@ -13,9 +13,9 @@ class App {
   constructor() {
     this.express = express();
     this.middlewares();
+    this.services();
     this.routes();
     // this.handleExceptions();
-    // this.services();
   }
 
   middlewares() {
@@ -26,7 +26,7 @@ class App {
   }
 
   async services() {
-    connectDB();
+    await connectDB();
     //CronJob (Readme)
 
   }
