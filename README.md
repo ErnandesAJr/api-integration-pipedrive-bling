@@ -19,7 +19,7 @@ Follows application requirements :
 
 As a future goal, here are some interesting features mapped during code development and improvements 😏
 
-- [ ] Insert project architecture
+- [ ] Insert image project architecture
 - [ ] Creation of error handling for each specific service of both PipeDrive and Bling.
 - [ ] Availability on Heroku or GitHub
 - [ ] Dockerize
@@ -46,6 +46,8 @@ As a future goal, here are some interesting features mapped during code developm
 - Run `npm run dev` to run the index;
 
 ## Project structure
+
+![Struture](docs/images/project-struture.png)
 
 ## 😵 Useful links
 
