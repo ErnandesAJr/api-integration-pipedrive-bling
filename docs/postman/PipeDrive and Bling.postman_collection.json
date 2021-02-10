@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "153c37eb-88d4-4dd8-9f12-91c129ef140c",
+		"name": "PipeDrive and Bling",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PipeDrive",
+			"item": [
+				{
+					"name": "Get All Deals",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api_token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.pipedrive.com/v1/deals",
+							"protocol": "https",
+							"host": [
+								"api",
+								"pipedrive",
+								"com"
+							],
+							"path": [
+								"v1",
+								"deals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stages",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "api_token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.pipedrive.com/v1/stages",
+							"protocol": "https",
+							"host": [
+								"api",
+								"pipedrive",
+								"com"
+							],
+							"path": [
+								"v1",
+								"stages"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bling",
+			"item": [
+				{
+					"name": "Find Solitation Buy",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bling.com.br/Api/v2/pedidoscompra/json",
+							"protocol": "https",
+							"host": [
+								"bling",
+								"com",
+								"br"
+							],
+							"path": [
+								"Api",
+								"v2",
+								"pedidoscompra",
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Solitation",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bling.com.br/Api/v2/pedidos",
+							"protocol": "https",
+							"host": [
+								"bling",
+								"com",
+								"br"
+							],
+							"path": [
+								"Api",
+								"v2",
+								"pedidos"
+							],
+							"query": [
+								{
+									"key": "xml",
+									"value": "<raiz>\n      <pedido>\n                  <desconto>0,00</desconto>\n                  <observacoes/>\n                  <observacaointerna/>\n                  <data>2021-02-09</data>\n                  <numero>1</numero>\n                  <numeroordemcompra/>\n                  <vendedor/>\n                  <valorfrete>0.00</valorfrete>\n                  <totalprodutos>0.00</totalprodutos>\n                  <totalvenda>0.00</totalvenda>\n                  <situacao>Em aberto</situacao>\n                  <datasaida>2021-02-09</datasaida>\n                  <cliente>\n                      <id>11237085687</id>\n                      <nome>Fantasia</nome>\n                      <cnpj/>\n                      <ie>ISENTO</ie>\n                      <rg/>\n                      <endereco/>\n                      <numero/>\n                      <complemento/>\n                      <cidade/>\n                      <bairro/>\n                      <cep/>\n                      <uf> </uf>\n                      <email/>\n                      <celular/>\n                      <fone/>\n                  </cliente>\n                  <itens>\n                      <item>\n                          <codigo/>\n                          <descricao>Celular</descricao>\n                          <quantidade>1.0000</quantidade>\n                          <valorunidade>0.0000000000</valorunidade>\n                          <precocusto/>\n                          <descontoitem>0.00</descontoitem>\n                          <un>1</un>\n                          <pesobruto>0.00000</pesobruto>\n                          <largura/>\n                          <altura/>\n                          <profundidade/>\n                          <descricaodetalhada/>\n                          <unidademedida>cm</unidademedida>\n                          <gtin/>\n                      </item>\n                  </itens>\n              </pedido>\n</raiz>",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Solicitation",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "apikey",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://bling.com.br/Api/v2/pedidos/json?xml='<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<pedido>\n <cliente>\n <nome>Fantasia</nome>\n </cliente>\n <transporte>\n <transportadora>Transportadora XYZ</transportadora>\n <tipo_frete>R</tipo_frete>\n <servico_correios>SEDEX - CONTRATO</servico_correios>\n <dados_etiqueta>\n <nome>Endereço de entrega</nome>\n <endereco>Rua Visconde de São Gabriel</endereco>\n <numero>392</numero>\n <complemento>Sala 59</complemento>\n <municipio>Bento Gonçalves</municipio>\n <uf>RS</uf>\n <cep>95.700-000</cep>\n <bairro>Cidade Alta</bairro>\n </dados_etiqueta>\n <volumes>\n <volume>\n <servico>SEDEX - CONTRATO</servico>\n <codigoRastreamento></codigoRastreamento>\n </volume>\n <volume>\n <servico>PAC - CONTRATO</servico>\n <codigoRastreamento></codigoRastreamento>\n </volume>\n </volumes>\n </transporte>\n <itens>\n <item>\n <codigo>001</codigo>\n <descricao>Caneta 001</descricao>\n <un>Pç</un>\n <qtde>10</qtde>\n <vlr_unit>1.68</vlr_unit>\n </item>\n <item>\n <codigo>002</codigo>\n <descricao>Caderno 002</descricao>\n <un>Un</un>\n <qtde>3</qtde>\n <vlr_unit>3.75</vlr_unit>\n </item>\n <item>\n <codigo>003</codigo>\n <descricao>Teclado 003</descricao>\n <un>Cx</un>\n <qtde>7</qtde>\n <vlr_unit>18.65</vlr_unit>\n </item>\n </itens>\n <parcelas>\n <parcela>\n <data>01/09/2009</data>\n <vlr>100</vlr>\n <obs>Teste obs 1</obs>\n </parcela>\n <parcela>\n <data>06/09/2009</data>\n <vlr>50</vlr>\n <obs></obs>\n </parcela>\n <parcela>\n <data>11/09/2009</data>\n <vlr>50</vlr>\n <obs>Teste obs 3</obs>\n </parcela>\n </parcelas>\n <vlr_frete>15</vlr_frete>\n <vlr_desconto>10</vlr_desconto>\n <obs>Testando o campo observações do pedido</obs>\n <obs_internas>Testando o campo observações internas do pedido</obs_internas>\n</pedido>'",
+							"protocol": "https",
+							"host": [
+								"bling",
+								"com",
+								"br"
+							],
+							"path": [
+								"Api",
+								"v2",
+								"pedidos",
+								"json"
+							],
+							"query": [
+								{
+									"key": "xml",
+									"value": "'<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<pedido>\n <cliente>\n <nome>Fantasia</nome>\n </cliente>\n <transporte>\n <transportadora>Transportadora XYZ</transportadora>\n <tipo_frete>R</tipo_frete>\n <servico_correios>SEDEX - CONTRATO</servico_correios>\n <dados_etiqueta>\n <nome>Endereço de entrega</nome>\n <endereco>Rua Visconde de São Gabriel</endereco>\n <numero>392</numero>\n <complemento>Sala 59</complemento>\n <municipio>Bento Gonçalves</municipio>\n <uf>RS</uf>\n <cep>95.700-000</cep>\n <bairro>Cidade Alta</bairro>\n </dados_etiqueta>\n <volumes>\n <volume>\n <servico>SEDEX - CONTRATO</servico>\n <codigoRastreamento></codigoRastreamento>\n </volume>\n <volume>\n <servico>PAC - CONTRATO</servico>\n <codigoRastreamento></codigoRastreamento>\n </volume>\n </volumes>\n </transporte>\n <itens>\n <item>\n <codigo>001</codigo>\n <descricao>Caneta 001</descricao>\n <un>Pç</un>\n <qtde>10</qtde>\n <vlr_unit>1.68</vlr_unit>\n </item>\n <item>\n <codigo>002</codigo>\n <descricao>Caderno 002</descricao>\n <un>Un</un>\n <qtde>3</qtde>\n <vlr_unit>3.75</vlr_unit>\n </item>\n <item>\n <codigo>003</codigo>\n <descricao>Teclado 003</descricao>\n <un>Cx</un>\n <qtde>7</qtde>\n <vlr_unit>18.65</vlr_unit>\n </item>\n </itens>\n <parcelas>\n <parcela>\n <data>01/09/2009</data>\n <vlr>100</vlr>\n <obs>Teste obs 1</obs>\n </parcela>\n <parcela>\n <data>06/09/2009</data>\n <vlr>50</vlr>\n <obs></obs>\n </parcela>\n <parcela>\n <data>11/09/2009</data>\n <vlr>50</vlr>\n <obs>Teste obs 3</obs>\n </parcela>\n </parcelas>\n <vlr_frete>15</vlr_frete>\n <vlr_desconto>10</vlr_desconto>\n <obs>Testando o campo observações do pedido</obs>\n <obs_internas>Testando o campo observações internas do pedido</obs_internas>\n</pedido>'"
+								},
+								{
+									"key": "xml",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "content-type",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "Ordes Opportunities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
